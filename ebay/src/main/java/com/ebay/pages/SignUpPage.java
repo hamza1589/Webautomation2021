@@ -1,4 +1,4 @@
-package com.ebay;
+package com.ebay.pages;
 
 public class SignUpPage {
 }

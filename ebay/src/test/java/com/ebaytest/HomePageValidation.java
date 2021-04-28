@@ -1,15 +1,16 @@
 package com.ebaytest;
 
 import com.base.TestBase;
-import com.ebay.HomePage;
+import com.ebay.pages.HomePage;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class HomePageValidation extends TestBase {
-    @Test(enabled = false)
-    public void validateUserBeingAbleToTypeOnSearchBar() {
+    @Test(dataProviderClass =DataProviders.class,dataProvider = "searchData")
+    public void validateUserBeingAbleToTypeOnSearchBar(String data) {
         HomePage homepage = PageFactory.initElements(driver, HomePage.class);
-        homepage.typeOnSearchBar();
+        homepage.typeOnSearchBar(data);
     }
 
     @Test(enabled = false)

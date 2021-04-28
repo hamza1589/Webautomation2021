@@ -1,4 +1,4 @@
-package com.ebay;
+package com.ebay.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -18,8 +18,8 @@ public class HomePage {
         searchBar.click();
     }
 
-    public void typeOnSearchBar() {
-        searchBar.sendKeys("java books");
+    public void typeOnSearchBar(String data) {
+        searchBar.sendKeys("data");
     }
 
     public void clickOnSignButton() {
