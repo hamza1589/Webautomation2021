@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class HomePageValidation extends TestBase {
-    @Test(dataProviderClass =DataProviders.class,dataProvider = "searchData")
+    //@Test(dataProviderClass =DataProviders.class,dataProvider = "searchData")
     public void validateUserBeingAbleToTypeOnSearchBar(String data) {
         HomePage homepage = PageFactory.initElements(driver, HomePage.class);
         homepage.typeOnSearchBar(data);
